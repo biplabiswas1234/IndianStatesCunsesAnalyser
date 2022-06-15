@@ -8,16 +8,28 @@ namespace IndianStateCensucAnalyser
         public class IndiaStateCensusDataCSV
         {
             string state;
-            int population;
+            string population;
             int area;
-            int density;
+            string density;
+            int serialNumber;
+            string stateName;
+            int tin;
+            string stateCode;
             public IndiaStateCensusDataCSV(string state, string population, string area, string density)
             {
                 this.state = state;
-                this.population = Convert.ToInt32(population);
+                this.population=population;
                 this.area = Convert.ToInt32(area);
-                this.density = Convert.ToInt32(density);
+                this.density = density;
+            }
+            public IndiaStateCensusDataCSV(IndiaStateCensusDataCSV indianStateCodeDataCSV)
+            {
+                this.stateName = indianStateCodeDataCSV.stateName;
+                this.serialNumber = indianStateCodeDataCSV.serialNumber;
+                this.tin = indianStateCodeDataCSV.tin;
+                this.stateCode = indianStateCodeDataCSV.stateCode;
             }
         }
+    
     
 }
